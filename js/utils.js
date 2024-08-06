@@ -19,10 +19,11 @@ export const toCapitalize = (str) => str
 
 /**
  * @function maskString
- * @description Changes all but the last four characters into '#'.
- * @param {string} str Sergeevich
- * @param {number} countVisible 6
- * @returns {string} ####eevich
+ * @description Changes all but the last N characters of a string into '#'.
+ * @param {string} str
+ * @param {number} countVisible
+ * @returns {string}
+ * @example maskString('someString', 5); // returns #####tring
  */
 
 export const maskString = (str, countVisible = 4) => str

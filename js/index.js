@@ -11,7 +11,3 @@ console.log(maskString(user.middleName));
 console.log(checkNumber(user.age));
 
 console.log(generateGreeting(user));
-
-// создать репозиторий
-// методы строк
-// методы массивов
