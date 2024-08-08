@@ -5,7 +5,7 @@ import { checkNumber } from './utils.js';
 import { generateGreeting } from './utils.js';
 import { numberToWords } from './utils.js';
 import { sortPersonsNamesByHeight } from './utils.js';
-
+/*
 console.log(toCapitalize(user.firstName));
 
 console.log(maskString(user.middleName));
@@ -27,3 +27,4 @@ console.log(numberToWords(user.age));
 
 console.log(sortPersonsNamesByHeight(["Mary", "John", "Emma"], [180, 165, 170]));
 console.log(sortPersonsNamesByHeight(["Alice", "Bob", "Bob"], [155, 185, 150]));
+*/
