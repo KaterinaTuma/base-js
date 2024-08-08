@@ -19,5 +19,7 @@ console.log(numberToWords(15));
 console.log(numberToWords(20));
 console.log(numberToWords(25));
 console.log(numberToWords(587));
+console.log(numberToWords(500));
 console.log(numberToWords(2024));
+console.log(numberToWords(9000));
 console.log(numberToWords(user.age));

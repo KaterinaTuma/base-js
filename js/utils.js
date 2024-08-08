@@ -98,15 +98,20 @@ export const numberToWords = (num) => {
   if (num < 100) {
     const numTens = Math.floor(num / 10);
     const numOnes = num % 10;
-    return `${tens[numTens]} ${numOnes !== 0 ? ones[numOnes] : ''}`
+    const phrase = `${tens[numTens]} ${numOnes !== 0 ? ones[numOnes] : ''}`;
+    return phrase.trim();
   };
   if (num < 1000) {
     const numHundreds = Math.floor(num / 100);
-    return `${ones[numHundreds]} hundred ${numberToWords(num % 100)}`;
+    const numTensOnes = num % 100;
+    const phrase = `${ones[numHundreds]} hundred ${numTensOnes !== 0 ? numberToWords(num % 100) : ''}`
+    return phrase.trim();
   };
   if (num < 10000) {
     const numThousands = Math.floor(num / 1000);
-    return `${ones[numThousands]} thousand ${numberToWords(num % 1000)}`
+    const numTensOnesHundreds = num % 1000;
+    const phrase = `${ones[numThousands]} thousand ${numTensOnesHundreds !== 0 ? numberToWords(num % 1000) : ''}`
+    return phrase.trim();
   }
 
   return 'Input number is out of the available range';
