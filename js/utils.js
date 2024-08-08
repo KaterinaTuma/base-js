@@ -116,3 +116,31 @@ export const numberToWords = (num) => {
 
   return 'Input number is out of the available range';
 };
+
+/**
+ * @function sortPersonsNamesByHeight
+ * @description Create sorted array of person names based on their corresponding heights.
+ * @param { string[] } names
+ * @param { number[] } heights
+ * @returns { string[] }
+ * @example 
+ * sortPersonsNamesByHeight(["Alice","Bob","Bob"], [155,185,150]);
+ * return ["Bob","Alice","Bob"]
+ */
+
+export const sortPersonsNamesByHeight = (names, heights) => {
+  const nameHeightPairs = names.map((name, index) => (
+    {
+      name: name,
+      height: heights[index],
+    }
+  ));
+
+  const sortedNameHeightPairs = nameHeightPairs.sort(
+    (personLeft, personRight) => personRight.height - personLeft.height
+  );
+
+  const sortedNames = sortedNameHeightPairs.map((person) => person.name);
+
+  return sortedNames;
+};
