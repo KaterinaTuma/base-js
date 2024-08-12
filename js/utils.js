@@ -104,13 +104,13 @@ export const numberToWords = (num) => {
   if (num < 1000) {
     const numHundreds = Math.floor(num / 100);
     const numTensOnes = num % 100;
-    const phrase = `${ones[numHundreds]} hundred ${numTensOnes !== 0 ? numberToWords(num % 100) : ''}`
+    const phrase = `${ones[numHundreds]} hundred ${numTensOnes !== 0 ? numberToWords(num % 100) : ''}`;
     return phrase.trim();
   };
   if (num < 10000) {
     const numThousands = Math.floor(num / 1000);
     const numTensOnesHundreds = num % 1000;
-    const phrase = `${ones[numThousands]} thousand ${numTensOnesHundreds !== 0 ? numberToWords(num % 1000) : ''}`
+    const phrase = `${ones[numThousands]} thousand ${numTensOnesHundreds !== 0 ? numberToWords(num % 1000) : ''}`;
     return phrase.trim();
   }
 
@@ -123,7 +123,7 @@ export const numberToWords = (num) => {
  * @param { string[] } names
  * @param { number[] } heights
  * @returns { string[] }
- * @example 
+ * @example
  * sortPersonsNamesByHeight(["Alice","Bob","Bob"], [155,185,150]);
  * return ["Bob","Alice","Bob"]
  */
@@ -131,14 +131,13 @@ export const numberToWords = (num) => {
 export const sortPersonsNamesByHeight = (names, heights) => {
   const nameHeightPairs = names.map((name, index) => (
     {
-      name: name,
+      name,
       height: heights[index],
     }
   ));
 
   const sortedNameHeightPairs = nameHeightPairs.sort(
-    (personLeft, personRight) => personRight.height - personLeft.height
-  );
+    (personLeft, personRight) => personRight.height - personLeft.height);
 
   const sortedNames = sortedNameHeightPairs.map((person) => person.name);
 
