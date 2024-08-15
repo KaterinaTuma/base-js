@@ -1,22 +1,14 @@
 import { calcAvg } from '../calcAvg/calcAvg.js';
 
 /**
- * @typedef {object} Students
- * @property {string} firstName
- * @property {string} lastName
- * @property {number[]} grades
+ * @typedef {import('./types.js').Students} Students
+ * @typedef {import('./types.js').StudentsAvgGrades} StudentsAvgGrades
  */
 
 /**
- * @typedef {object} StudentAvgGrades
- * @property {string} lastName
- * @property {number} avgGrade
- */
-
-/**
- *@function calcAvgCrades
+ * @function calcAvgCrades
  * @param {Students[]} students
- * @returns {StudentAvgGrades[]}
+ * @returns {StudentsAvgGrades[]}
  */
 
 export const calcAvgCrades = (students) => {
