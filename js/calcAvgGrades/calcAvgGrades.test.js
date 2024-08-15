@@ -1,8 +1,12 @@
 import { calcAvgCrades } from './calcAvgGrades.js';
+/**
+ * @typedef {import('./types.js').TestData} TestData
+ */
 
+/** @type {TestData} */
 const testData = {
   test1: {
-    arr: [
+    students: [
       { firstName: 'Ivan', lastName: 'Ivanov', grades: [3, 4, 5] },
       { firstName: 'Petr', lastName: 'Petrov', grades: [5, 5, 4] },
       { firstName: 'Sidor', lastName: 'Sidorov', grades: [2, 3, 3] },
@@ -15,7 +19,7 @@ const testData = {
   },
 
   test2: {
-    arr: [
+    students: [
       { firstName: 'Anna', lastName: 'Smirnova', grades: [5, 4, 4, 5] },
       { firstName: 'Olga', lastName: 'Kuznetsova', grades: [3, 3, 4, 4] },
     ],
@@ -26,7 +30,7 @@ const testData = {
   },
 
   test3: {
-    arr: [
+    students: [
       { firstName: 'Elena', lastName: 'Alexandrova', grades: [3, 3, 3] },
     ],
     expectedStudentsAvgGrades: [
@@ -38,19 +42,19 @@ const testData = {
 describe('calcAvg', () => {
   test('Unit test1', () => {
     const test1 = testData.test1;
-    const studentAvgGrades = calcAvgCrades(test1.arr);
+    const studentAvgGrades = calcAvgCrades(test1.students);
     expect(studentAvgGrades).toEqual(test1.expectedStudentsAvgGrades);
   });
 
   test('Unit test2', () => {
     const test2 = testData.test2;
-    const studentAvgGrades = calcAvgCrades(test2.arr);
+    const studentAvgGrades = calcAvgCrades(test2.students);
     expect(studentAvgGrades).toEqual(test2.expectedStudentsAvgGrades);
   });
 
   test('Unit test3', () => {
     const test3 = testData.test3;
-    const studentAvgGrades = calcAvgCrades(test3.arr);
+    const studentAvgGrades = calcAvgCrades(test3.students);
     expect(studentAvgGrades).toEqual(test3.expectedStudentsAvgGrades);
   });
 });
