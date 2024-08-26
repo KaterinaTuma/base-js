@@ -1,0 +1,50 @@
+import { checkPowerOfTwo } from './checkPowerOfTwo.js';
+
+const testData = {
+  test1: {
+    num: 2,
+    expectedIsPowerOfTwo: true,
+  },
+
+  test2: {
+    num: 4096,
+    expectedIsPowerOfTwo: true,
+  },
+
+  test3: {
+    num: 5,
+    expectedIsPowerOfTwo: false,
+  },
+
+  test4: {
+    num: 0,
+    expectedIsPowerOfTwo: false,
+  },
+};
+
+describe('isPowerOfTwo', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const isPowerOfTwo = checkPowerOfTwo(test1.num);
+    expect(isPowerOfTwo).toEqual(test1.expectedIsPowerOfTwo);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const isPowerOfTwo = checkPowerOfTwo(test2.num);
+    expect(isPowerOfTwo).toEqual(test2.expectedIsPowerOfTwo);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const isPowerOfTwo = checkPowerOfTwo(test3.num);
+    expect(isPowerOfTwo).toEqual(test3.expectedIsPowerOfTwo);
+  });
+
+  test('Unit test4', () => {
+    const test4 = testData.test4;
+    const isPowerOfTwo = checkPowerOfTwo(test4.num);
+    expect(isPowerOfTwo).toEqual(test4.expectedIsPowerOfTwo);
+  });
+});
+
