@@ -1,0 +1,136 @@
+import { whoseBicycle } from './whoseBicycle.js';
+
+/**
+* @typedef {import('./types').TestData} TestData
+*/
+
+const testData = {
+  test1: {
+    objA: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    objB: {
+      'algebra': 8,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    objC: {
+      'algebra': 6,
+      'history': 5,
+      'physics': 5,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    expectedStr: 'I need to buy a bicycle for my second son.',
+  },
+
+  test2: {
+    objA: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    objB: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    objC: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    expectedStr: 'I need to buy a bicycle for my third son.',
+  },
+
+  test3: {
+    objA: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 5,
+    },
+    objB: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    objC: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    expectedStr: 'I need to buy a bicycle for my third son.',
+  },
+
+  test4: {
+    objA: {
+      'algebra': 3,
+      'history': 7,
+      'physics': 8,
+      'geography': 4,
+      'chemistry': 10,
+    },
+    objB: {
+      'algebra': 6,
+      'history': 7,
+      'physics': 8,
+      'geography': 9,
+      'chemistry': 4,
+    },
+    objC: {
+      'algebra': 9,
+      'history': 7,
+      'physics': 9,
+      'geography': 9,
+      'chemistry': 10,
+    },
+    expectedStr: 'I need to buy a bicycle for my third son.',
+  },
+
+
+};
+
+describe('whoseBicycle', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const str = whoseBicycle(test1.objA, test1.objB, test1.objC);
+    expect(str).toEqual(test1.expectedStr);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const str = whoseBicycle(test2.objA, test2.objB, test2.objC);
+    expect(str).toEqual(test2.expectedStr);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const str = whoseBicycle(test3.objA, test3.objB, test3.objC);
+    expect(str).toEqual(test3.expectedStr);
+  });
+
+  test('Unit test4', () => {
+    const test4 = testData.test4;
+    const str = whoseBicycle(test4.objA, test4.objB, test4.objC);
+    expect(str).toEqual(test4.expectedStr);
+  });
+});
+
