@@ -23,5 +23,17 @@ describe('sentenceFromOrderedDict', () => {
     const str = sentenceFromOrderedDict(test1.arr);
     expect(str).toEqual(test1.expectedStr);
   });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const str = sentenceFromOrderedDict(test2.arr);
+    expect(str).toEqual(test2.expectedStr);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const str = sentenceFromOrderedDict(test3.arr);
+    expect(str).toEqual(test3.expectedStr);
+  });
 });
 
