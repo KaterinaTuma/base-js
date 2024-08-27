@@ -1,0 +1,39 @@
+import { sentenceFromOrderedDict } from './sentenceFromOrderedDict.js';
+
+const testData = {
+  test1: {
+    arr: [{ '4': 'dog' }, { '2': 'took' }, { '3': 'his' }, { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }],
+    expectedStr: 'Vatsan took his dog for a spin',
+  },
+
+  test2: {
+    arr: [{ '3': 'Jake.' }, { '5': 'Chinatown' }, { '1': 'Forget' }, { '4': 'It is' }, { '2': 'it' }],
+    expectedStr: 'Forget it Jake. It is Chinatown',
+  },
+
+  test3: {
+    arr: [{ '3': 'vatsan!' }, { '2': 'love' }, { '1': 'I' }],
+    expectedStr: 'I love vatsan!',
+  },
+};
+
+describe('sentenceFromOrderedDict', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const str = sentenceFromOrderedDict(test1.arr);
+    expect(str).toEqual(test1.expectedStr);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const str = sentenceFromOrderedDict(test2.arr);
+    expect(str).toEqual(test2.expectedStr);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const str = sentenceFromOrderedDict(test3.arr);
+    expect(str).toEqual(test3.expectedStr);
+  });
+});
+
