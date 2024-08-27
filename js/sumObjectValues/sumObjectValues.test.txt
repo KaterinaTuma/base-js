@@ -1,0 +1,28 @@
+import { sumObjectValues } from './sumObjectValues.js';
+
+const testData = {
+  test1: {
+    obj: { a: 10, b: 20, c: 30 },
+    expectedSum: 60,
+  },
+
+  test2: {
+    obj: { a: 5, b: 5, c: 30 },
+    expectedSum: 40,
+  },
+};
+
+describe('sumObjectValues', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const sum = sumObjectValues(test1.obj);
+    expect(sum).toEqual(test1.expectedSum);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const sum = sumObjectValues(test2.obj);
+    expect(sum).toEqual(test2.expectedSum);
+  });
+});
+
