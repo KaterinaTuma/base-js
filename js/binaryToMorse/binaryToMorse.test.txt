@@ -1,0 +1,28 @@
+import { binaryToMorse } from './binaryToMorse.js';
+
+const testData = {
+  test1: {
+    str: '10111110',
+    expectedStr: '.--.',
+  },
+
+  test2: {
+    str: '101111**********10',
+    expectedStr: '.-- .',
+  },
+};
+
+describe('binaryToMorse', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const str = binaryToMorse(test1.str);
+    expect(str).toEqual(test1.expectedStr);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const str = binaryToMorse(test2.str);
+    expect(str).toEqual(test2.expectedStr);
+  });
+});
+

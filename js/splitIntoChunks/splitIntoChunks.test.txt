@@ -1,0 +1,42 @@
+import { splitIntoChunks } from './splitIntoChunks.js';
+
+const testData = {
+  test1: {
+    str: 'Robert Kimberly',
+    chunkSize: 5,
+    expectedArr: ['Rober', 't Kim', 'berly'],
+  },
+
+  test2: {
+    str: 'Kimberly',
+    chunkSize: 2,
+    expectedArr: ['Ki', 'mb', 'er', 'ly'],
+  },
+
+  test3: {
+    str: 'Samantha',
+    chunkSize: 4,
+    expectedArr: ['Sama', 'ntha'],
+  },
+};
+
+describe('splitIntoChunks', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const arr = splitIntoChunks(test1.str, test1.chunkSize);
+    expect(arr).toEqual(test1.expectedArr);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const arr = splitIntoChunks(test2.str, test2.chunkSize);
+    expect(arr).toEqual(test2.expectedArr);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const arr = splitIntoChunks(test3.str, test3.chunkSize);
+    expect(arr).toEqual(test3.expectedArr);
+  });
+});
+
