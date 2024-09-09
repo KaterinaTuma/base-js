@@ -26,8 +26,6 @@ const testData = {
     ],
     expectedArr: [1, 2, 4, 8, 7, 6, 5, 9, 12],
   },
-
-
 };
 
 describe('mergeArrays', () => {
