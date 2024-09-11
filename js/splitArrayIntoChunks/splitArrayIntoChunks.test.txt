@@ -1,0 +1,42 @@
+import { splitArrayIntoChunks } from './splitArrayIntoChunks.js';
+
+const testData = {
+  test1: {
+    arr: ['R', 'o', 'b', 'e', 'r', 't', ' ', 'K', 'i', 'm', 'b', 'e', 'r', 'l', 'y'],
+    chunkSize: 5,
+    expectedArr: [['R', 'o', 'b', 'e', 'r'], ['t', ' ', 'K', 'i', 'm'], ['b', 'e', 'r', 'l', 'y']],
+  },
+
+  test2: {
+    arr: ['K', 'i', 'm', 'b', 'e', 'r', 'l', 'y'],
+    chunkSize: 2,
+    expectedArr: [['K', 'i'], ['m', 'b'], ['e', 'r'], ['l', 'y']],
+  },
+
+  test3: {
+    arr: [1, 2, 3, 4, 5, 6, 7, 8],
+    chunkSize: 4,
+    expectedArr: [[1, 2, 3, 4], [5, 6, 7, 8]],
+  },
+};
+
+describe('splitArrayIntoChunks', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const arr = splitArrayIntoChunks(test1.arr, test1.chunkSize);
+    expect(arr).toEqual(test1.expectedArr);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const arr = splitArrayIntoChunks(test2.arr, test2.chunkSize);
+    expect(arr).toEqual(test2.expectedArr);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const arr = splitArrayIntoChunks(test3.arr, test3.chunkSize);
+    expect(arr).toEqual(test3.expectedArr);
+  });
+});
+

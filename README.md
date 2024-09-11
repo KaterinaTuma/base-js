@@ -8,6 +8,7 @@
 
 Tasks:
 
+- [Reverse bytes data](./js/reverseBytesData/)
 - [Find Killer](./js/findKiller/)
 - [vowelOne](./js/vowelOne/)
 - [Unpacking Arguments](./js/unpackArguments/)

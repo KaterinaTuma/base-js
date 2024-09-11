@@ -1,0 +1,16 @@
+import { reverseBytesData } from './reverseBytesData.js';
+
+const testData = {
+  test1: {
+    data: [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0],
+    expectedArr: [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+  },
+};
+
+describe('reverseBytesData', () => {
+  test('Unit test 1', () => {
+    const test1 = testData.test1;
+    const reversedArr = reverseBytesData(test1.data);
+    expect(test1.expectedArr).toEqual(reversedArr);
+  });
+});
