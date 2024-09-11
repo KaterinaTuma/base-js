@@ -1,0 +1,46 @@
+
+import { unpackArguments } from './unpackArguments.js';
+
+// Sample functions
+function add(x, y) { return x + y; }
+function minus(x, y) { return x - y; }
+
+const testData = {
+  test1: {
+    funcName: add,
+    args: [1, 2],
+    expectedReturn: 3,
+  },
+
+  test2: {
+    funcName: minus,
+    args: [2, 1],
+    expectedReturn: 1,
+  },
+
+  test3: {
+    funcName: minus,
+    args: [40, 10],
+    expectedReturn: 30,
+  },
+};
+
+describe('unpackArguments', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const funcReturn = unpackArguments(test1.funcName, test1.args);
+    expect(funcReturn).toEqual(test1.expectedReturn);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const funcReturn = unpackArguments(test2.funcName, test2.args);
+    expect(funcReturn).toEqual(test2.expectedReturn);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const funcReturn = unpackArguments(test3.funcName, test3.args);
+    expect(funcReturn).toEqual(test3.expectedReturn);
+  });
+});
