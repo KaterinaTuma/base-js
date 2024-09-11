@@ -8,6 +8,7 @@
 
 Tasks:
 
+- [Unpacking Arguments](./js/unpackArguments/)
 - [Minimize Sum Of Array](./js/minimizeSumOfArray/)
 - [Valid braces](./js/validBraces/)
 - [Towel sort](./js/towelSort/)
