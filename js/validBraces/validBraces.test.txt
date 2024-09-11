@@ -1,0 +1,97 @@
+import { validBraces } from './validBraces.js';
+
+const config1 = [['(', ')']];
+const config2 = [['(', ')'], ['[', ']']];
+const config3 = [['(', ')'], ['[', ']'], ['{', '}']];
+const config4 = [['|', '|']];
+const config5 = [['(', ')'], ['|', '|']];
+const config6 = [['1', '2'], ['3', '4'], ['5', '6'], ['7', '7'], ['8', '8']];
+const config7 = [['(', ')'], ['[', ']'], ['{', '}'], ['|', '|']];
+
+const testData = {
+  test1: {
+    str: '()',
+    bracketsConfig: config1,
+    expectedIsValid: true,
+  },
+
+  test2: {
+    str: '((()))()',
+    bracketsConfig: config2,
+    expectedIsValid: true,
+  },
+
+  test3: {
+    str: '())(',
+    bracketsConfig: config1,
+    expectedIsValid: false,
+  },
+
+  test4: {
+    str: '[]()',
+    bracketsConfig: config2,
+    expectedIsValid: true,
+  },
+
+  test5: {
+    str: '|(|)',
+    bracketsConfig: config5,
+    expectedIsValid: false,
+  },
+
+  test6: {
+    str: '111115611111111222288888822225577877778775555666677777777776622222',
+    bracketsConfig: config6,
+    expectedIsValid: true,
+  },
+
+  test7: {
+    str: '|()|',
+    bracketsConfig: config5,
+    expectedIsValid: true,
+  },
+};
+
+describe('validBraces', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const isValid = validBraces(test1.str, test1.bracketsConfig);
+    expect(isValid).toEqual(test1.expectedIsValid);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const isValid = validBraces(test2.str, test2.bracketsConfig);
+    expect(isValid).toEqual(test2.expectedIsValid);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const isValid = validBraces(test3.str, test3.bracketsConfig);
+    expect(isValid).toEqual(test3.expectedIsValid);
+  });
+
+  test('Unit test4', () => {
+    const test4 = testData.test4;
+    const isValid = validBraces(test4.str, test4.bracketsConfig);
+    expect(isValid).toEqual(test4.expectedIsValid);
+  });
+
+  test('Unit test5', () => {
+    const test5 = testData.test5;
+    const isValid = validBraces(test5.str, test5.bracketsConfig);
+    expect(isValid).toEqual(test5.expectedIsValid);
+  });
+
+  test('Unit test6', () => {
+    const test6 = testData.test6;
+    const isValid = validBraces(test6.str, test6.bracketsConfig);
+    expect(isValid).toEqual(test6.expectedIsValid);
+  });
+
+  test('Unit test7', () => {
+    const test7 = testData.test7;
+    const isValid = validBraces(test7.str, test7.bracketsConfig);
+    expect(isValid).toEqual(test7.expectedIsValid);
+  });
+});
