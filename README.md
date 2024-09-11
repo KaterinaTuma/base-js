@@ -1,8 +1,10 @@
 # base-js
 
+### Algorithmic tasks solving with:
+
 • JavaScript  
 • TypeScript  
-• JEST
+• Jest
 
 Tasks:
 
