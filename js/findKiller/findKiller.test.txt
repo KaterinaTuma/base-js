@@ -1,0 +1,37 @@
+import { findKiller } from './findKiller.js';
+
+const testData = {
+  test1: {
+    suspectInfo: {
+      'James': ['Jacob', 'Bill', 'Lucas'],
+      'Johnny': ['David', 'Kyle', 'Lucas'],
+      'Peter': ['Lucy', 'Kyle'],
+    },
+    dead: ['Lucas', 'Bill'],
+    expectedKiller: 'James',
+  },
+
+  test2: {
+    suspectInfo: {
+      'Brad': [],
+      'Megan': ['Ben', 'Kevin'],
+      'Finn': [],
+    },
+    dead: ['Ben'],
+    expectedKiller: 'Megan',
+  },
+};
+
+describe('findKiller', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const killer = findKiller(test1.suspectInfo, test1.dead);
+    expect(killer).toEqual(test1.expectedKiller);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const killer = findKiller(test2.suspectInfo, test2.dead);
+    expect(killer).toEqual(test2.expectedKiller);
+  });
+});
