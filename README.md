@@ -8,6 +8,7 @@
 
 Tasks:
 
+- [Find Killer](./js/findKiller/)
 - [vowelOne](./js/vowelOne/)
 - [Unpacking Arguments](./js/unpackArguments/)
 - [Minimize Sum Of Array](./js/minimizeSumOfArray/)
