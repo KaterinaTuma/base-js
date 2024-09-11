@@ -8,6 +8,7 @@
 
 Tasks:
 
+- [vowelOne](./js/vowelOne/)
 - [Unpacking Arguments](./js/unpackArguments/)
 - [Minimize Sum Of Array](./js/minimizeSumOfArray/)
 - [Valid braces](./js/validBraces/)
