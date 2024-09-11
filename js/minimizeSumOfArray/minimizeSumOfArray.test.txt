@@ -1,0 +1,39 @@
+import { minimizeSumOfArray } from './minimizeSumOfArray.js';
+
+const testData = {
+  test1: {
+    arr: [5, 4, 2, 3],
+    expectedMinSum: 22,
+  },
+
+  test2: {
+    arr: [12, 6, 10, 26, 3, 24],
+    expectedMinSum: 342,
+  },
+
+  test3: {
+    arr: [9, 2, 8, 7, 5, 4, 0, 6],
+    expectedMinSum: 74,
+  },
+};
+
+describe('sumObjectValues', () => {
+  test('Unit test1', () => {
+    const test1 = testData.test1;
+    const minSum = minimizeSumOfArray(test1.arr);
+    expect(minSum).toEqual(test1.expectedMinSum);
+  });
+
+  test('Unit test2', () => {
+    const test2 = testData.test2;
+    const minSum = minimizeSumOfArray(test2.arr);
+    expect(minSum).toEqual(test2.expectedMinSum);
+  });
+
+  test('Unit test3', () => {
+    const test3 = testData.test3;
+    const minSum = minimizeSumOfArray(test3.arr);
+    expect(minSum).toEqual(test3.expectedMinSum);
+  });
+});
+
