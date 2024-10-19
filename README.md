@@ -7,7 +7,7 @@
 • Jest
 
 Tasks:
-
+- [Base Conversion](./js/convertBase/)
 - [Count strings in objects](./js/countStringsInObject/)
 - [Reverse bytes data](./js/reverseBytesData/)
 - [Find Killer](./js/findKiller/)
